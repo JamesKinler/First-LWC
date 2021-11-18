@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Wire List View" icon-name="utility:user">
+      <div class="slds-var-m-around_medium">
+        <div style="padding: 10px">
+          <template if:true={listView.data}>
+            <template for:each={contacts} for:item="contact">
+              <p key={contact.fields.Id.value}>{contact.fields.Name.value}</p>
+              <p key={contact.fields.Id.value}>{contact.fields.Phone.value}</p>
+            </template>
+          </template>
+        </div>
+      </div>
+    </lightning-card>
+  </template>
+
